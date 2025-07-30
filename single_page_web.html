@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+        #navbar{
+            height: 12vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+        }
+        #lnav{
+            width: 25%;
+            display: flex;
+            justify-content: space-around;
+        }
+        #lnav p:hover{
+            color: #1a73e8;
+            transition: background-color 0.3s;
+        }
+        #cnav h1{
+            width: 10%;
+            text-align: center;
+            margin: 0;
+            font-size: 32px;
+        }
+        #cnav p{
+            margin: 0;
+            font-size: 14px;
+        }
+        #rnav{
+            width: 20%;
+            display: flex;
+            justify-content: space-around;
+        }
+        #rnav p:hover{
+            color: #1a73e8;
+        }
+        #signup{
+            padding: 6px 16px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a73e8; 
+            border: 1px solid #1a73e8;
+            border-radius: 6px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #signup:hover{
+            background-color: #1a73e8;
+            color: white;
+        }
+        #sliders{
+            height: 100vh;
+            width: 100vw;
+            background-image: url(webhome\ \(2\).jpg);
+            /* position: relative; */
+            background-size: cover;
+            background-position: center;
+        }
+        #sliders h1{
+            position: absolute;
+            color: white;
+            font-size: 32px;
+            margin: 0;
+        }
+        .h1first{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .btn-create {
+            position: absolute;
+            top: 60%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #1a73e8;
+            border: 1px solid #1a73e8;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-create:hover {
+            background-color: #155dc0;
+            border-color: #155dc0;
+        }
+        #fcontent{
+            width: 40vw;
+            text-align: center;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+        #btn-container{
+            width: 25vw;
+            text-align: center;
+            font-size: 16px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        #btn-container a {
+            color: #1a73e8;
+            font-weight: bold;
+            font-size: 600;
+            text-decoration: none;
+        }
+        #btn-container a:hover {
+            color: #155dc0;
+        }
+        #get-start-btn{
+            padding: 8px 16px;
+            border:1px solid #1a73e8;
+            background-color: #1a73e8;
+            border-radius: 6px;
+            color: white;
+            font-weight: 100;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #get-start-btn:hover{
+            background-color: #155dc0;
+            border-color: #155dc0;
+        }
+        #img{
+            width: 100vw;
+            height: 50vh;
+            /* background-color: #155dc0; */
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        #img1{
+            width: 25%;
+            height: 50vh;
+            /* background-color: aliceblue; */
+            background-image: url(1.jpg);
+            background-size: cover;
+            border-radius: 6px;
+            transition: transform 0.6s ease, background-size 0.6s ease;
+        }
+        #img1:hover{
+            transform: scale(1.05);
+            background-size: 120%;
+            cursor: zoom-in;
+        }
+        #img2{
+            width: 25%;
+            height: 50vh;
+            /* background-color: rgb(12, 133, 12); */
+            background-image: url(2.jpg);
+            background-size: cover;
+            border-radius: 6px;
+            transition: transform 0.6s ease, background-size 0.6s ease;
+        }
+        #img2:hover{
+            transform: scale(1.05);
+            background-size: 120%;
+            cursor: zoom-in;
+        }
+        #img3{
+            width: 25%;
+            height: 50vh;
+            /* background-color: rgb(9, 109, 196); */
+            background-image: url(3.jpg);
+            background-size: cover;
+            border-radius: 6px;
+            transition: transform 0.6s ease, background-size 0.6s ease;
+        }
+        #img3:hover{
+            transform: scale(1.05);
+            background-size: 120%;
+            cursor: zoom-in;
+        }
+        #img4{
+            width: 25%;
+            height: 50vh;
+            /* background-color: rgb(213, 114, 1); */
+            background-image: url(4.jpg);
+            background-size: cover;
+            border-radius: 6px;
+            transition: transform 0.6s ease, background-size 0.6s ease;
+        }
+        #img4:hover{
+            transform: scale(1.05);
+            background-size: 120%;
+            cursor: zoom-in;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .step {
+            width: 23%;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .step img.icon {
+            width: 80px;
+            margin-bottom: 40px;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .step a {
+            color: #1a73e8;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 35px;
+            right: -35px;
+            font-size: 28px;
+            color: #000;
+        }
+
+        .step:last-child .arrow {
+            display: none;
+        }
+        /* #another-img{
+            width: 40px;
+            height: auto;
+        } */
+
+        #grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            }
+
+        #grid-item {
+            text-align: center;
+            }
+
+        #grid-item img {
+            width: 100%;
+            height: 70%;
+            display: block;
+            border-radius: 8px;
+        }
+        #footer{
+            width: 100vw;
+            height: 60vh;
+            background-color: rgb(222, 221, 221);
+            display: flex;
+            justify-content: space-around;
+        }
+        #f1{
+            width: 25%;
+        }
+        #f1 h3{
+            color: gray;
+            margin-left: 20%;
+        }
+        #f1 p{
+            cursor: pointer;
+            margin-left: 20%;
+        }
+        #f2{
+            width: 25%;
+        }
+        #f2 h3,p{
+            cursor: pointer;
+            margin-left: 20%;
+        }
+        #f3{
+            width: 25%;
+        }
+        #f3 h3{
+            color: gray;
+            margin-left: 20%;
+        }
+        #f4{
+            width: 25%;
+        }
+        #f4 h3{
+            color: gray;
+            margin-left: 20%;
+        }
+        #last-bar{
+            width: 100vw;
+            height: 10vh;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="lnav">
+            <p>Websites</p>
+            <p>Online Store</p>
+            <p>Pricing</p>
+            <P>More</P>
+        </div>
+        <div id="cnav">
+            <h1>weebly</h1>
+            <p><small>ecommerce website</small></p>
+        </div>
+        <div id="rnav">
+            <p>Login</p>
+            <button id="signup">Sign Up</button>
+        </div>
+    </div>
+    <div id="sliders">
+        <h1 class="h1first">Get started with our powerful free website builder.</h1>
+        <button class="btn-create">Create Your Website</button>
+    </div><br><br>
+    <div id="fcontent">
+        <h1>Build a free website that grows with your business.</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque sunt tenetur commodi voluptatem at harum facilis placeat optio error aspernatur enim sed cupiditate, libero possimus repellat asperiores. Quod, reprehenderit incidunt?</p>
+        <div id="btn-container">
+            <button id="get-start-btn">Get Start</button>
+            <a href="#">More Websites &gt;</a>
+        </div>
+    </div><br><br>
+    <div id="img">
+        <div id="img1">
+            <img src="" alt="">
+        </div>
+        <div id="img2">
+        </div>
+        <div id="img3">
+        </div>
+        <div id="img4">
+        </div>
+    </div>
+    <div id="fcontent">
+        <h1>Succeed with the right website builder, from start to growth.</h1>
+    </div>
+
+    <!-- <div class="steps-container">
+  <div class="step">
+    <img class="icon" src="all.jpg" alt="Get Going" />
+    <h3>Get Going</h3>
+    <p>Get step-by-step guidance on how to build and launch a website with expert starter guides and planning tools.</p>
+    <a href="#">Get Started &gt;</a>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="step">
+    <img class="icon" src="all.jpg" alt="Get Online" />
+    <h3>Get Online</h3>
+    <p>Get discovered with a professional website. Easily customize with our free website builder.</p>
+    <a href="#">Learn More &gt;</a>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="step">
+    <img class="icon" src="all.jpg" alt="Get Selling" />
+    <h3>Get Selling</h3>
+    <p>All-in-one powerful eCommerce tools to simplify order management, shipping, and payments.</p>
+    <a href="#">Learn More &gt;</a>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="step">
+    <img class="icon" src="all.jpg" alt="Get Growing" />
+    <h3>Get Growing</h3>
+    <p>Find new customers with integrated marketing tools, from Facebook ads to automated email campaigns.</p>
+    <a href="#">Learn More &gt;</a>
+  </div>
+</div><br><br> -->
+<hr><br><br>
+    <div id="fcontent">
+        <h1>Freedom to sell anytime, anywhere with Weebly + Square.</h1>
+        <p>Weebly is now a part of the Square product suite. This means never missing a sale and letting your customers pay how they want to. Whether it's at a pop-up shop or your own online store, Square takes care of your payments for you, so you can focus on your business</p>
+        <div id="btn-container">
+            <button id="get-start-btn">Sign Up</button>
+            <a href="#">Learn More &gt;</a>
+        </div>
+    </div><br><br>
+    <div id="another-img">
+        <img src="another.jpg" style="width: 100vw; height: 100vh;" alt="another">
+    </div>
+    <div id="grid-container">
+        <div id="grid-item">
+            <img src="11.jpg" alt="1">
+            <p>1st Website</p>
+        </div>
+        <div id="grid-item">
+            <img src="12.jpg" alt="2">
+            <p>2nd Website</p>
+        </div>
+        <div id="grid-item">
+            <img src="13.jpg" alt="3">
+            <p>3rd Website</p>
+        </div>
+        <div id="grid-item">
+            <img src="14.jpg" alt="4">
+            <p>4th Website</p>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="f1">
+            <h3>Product</h3>
+            <p>Websites</p>
+            <p>Online Stores</p>
+            <p>Photo Studio</p>
+            <p>Features</p>
+            <p>Themes</p>
+            <p>Pricing</p>
+            <p>App Center</p>
+            <p>Mobile Apps</p>
+        </div>
+        <div id="f2">
+            <h3 style="color: gray;">Resources</h3>
+            <p>Blog</p>
+            <p>Success Stories</p>
+            <p>Developer Docs</p>
+            <p>Affiliates</p>
+        </div>
+        <div id="f3">
+            <h3 style="color: gray;">Support</h3>
+            <p>Support Center</p>
+            <p>Comunity</p>
+        </div>
+        <div id="f4">
+            <h3 style="color: gray;">Company</h3>
+            <p>About</p>
+            <p>Careers</p>
+            <p>Press</p>
+            <p>Contact</p>
+            <p>Terms</p>
+            <p>Privacy Policy</p>
+            <p>Additional California Privacy Disclosure</p>
+        </div>
+    </div>
+    <div id="last-bar">
+        <div id="lastleft">
+            <p>© 2025 Square, Inc</p>
+        </div>
+        <div id="lastleft">
+            
+        </div>
+        <div id="lastleft">
+
+        </div>
+    </div>
+</body>
+</html>

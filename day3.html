@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        p{
+            color: green;
+        }
+        #p1{
+            font-size: 30px;
+        }
+        .dc:hover{
+            color: brown;
+        }
+        #p1:active{
+            color: brown;
+            font-size: 40px;
+        }
+        #pse::first-line{
+            color: yellow;
+        }
+        #pse::after{
+            content: "MMMM";
+        }
+    </style>
+</head>
+<body>
+    <iframe src="day2.html" frameborder="0"></iframe>
+    <p>Without Style</p>
+    <p style="color: red;">Inline Style</p>
+    <p>Internal Style</p>
+
+    <p id="p1">External Style</p>
+    <p class="p2 bc dc">Class using style</p>
+
+    <p id="pse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, vitae officia nesciunt officiis voluptate vel architecto obcaecati quia. Saepe quam quos quibusdam! Ab assumenda, nam blanditiis officiis minima id ipsam.</p>
+    
+    <input id="mm" type="text" name="">
+    <p id="p7">Pesudo Classss properties</p>
+</body>
+</html>

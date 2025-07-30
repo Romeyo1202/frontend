@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Zealand Flag Style Text</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #001f3f; /* dark blue like flag background */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nz-text {
+      font-size: 80px;
+      font-family: 'Arial Black', sans-serif;
+      position: relative;
+      color: #00247D; /* flag blue */
+      text-transform: uppercase;
+    }
+
+    .nz-text span:nth-child(even) {
+      color: #CC142B; /* flag red */
+    }
+
+    .nz-text::before {
+      content: "★  ★  ★  ★";
+      position: absolute;
+      top: -30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 20px;
+      color: white;
+      letter-spacing: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nz-text">
+    <span>N</span><span>e</span><span>w</span>
+    <span> </span>
+    <span>Z</span><span>e</span><span>a</span><span>l</span><span>a</span><span>n</span><span>d</span>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 100vw;
+            height: 40vh;
+            justify-content: space-around;
+            display: flex;
+        }
+        #left{
+            width: 30%;
+            height: 40vh;
+            display: grid;
+            grid-template-columns:200px 100px;
+            row-gap: 20px;
+            transition: 2s all ease-in-out;
+            /* transition-delay: 3s; */
+            /* transform: translateX(100px); */
+            background-color: rgb(227, 84, 28);
+            /* border-radius: 10%; */
+            /* border-bottom-left-radius: 10%; */
+            border: 5px solid black;
+            margin-top: 20px;
+            padding: 50px;
+        }
+        #left:hover{
+            transform: scale(120%);
+            background-color: yellow;
+            width: 10px;
+        }
+        #center{
+            width: 30%;
+            height: 40vh;
+            display: grid;
+            grid-template-columns:200px 100px;
+            row-gap: 20px;
+            background-color: rgb(3, 192, 59);
+        }
+        #right{
+            width: 30%;
+            height: 40vh;
+            display: grid;
+            grid-template-columns:200px 100px;
+            row-gap: 20px;
+            background-color: rgb(199, 14, 196);
+        }
+        img{
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="left">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+        </div>
+        <div id="center">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+        </div>
+        <div id="right">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+            <img src="image.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
