@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #main{
+            height: 400vh;
+            width: 100vw;
+            background-color: black;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 2rem;
+        }
+        #left{
+            margin-left: 50px;
+            width:25%;
+            height: 80vh;
+            background-color: blue;
+            border-radius: 6px;
+            position: fixed;
+        }
+        #right{
+            margin-bottom: 20px;
+            margin-left: 380px;
+            margin-right: 30px;
+            width:68%;
+            height: 130vh;
+            background-color: rgb(0, 255, 55);
+            border-radius: 6px;
+            column-gap: 10px;    
+        }
+        /* #r1{
+            background-color: greenyellow;
+            height: 100vh;
+            width: 70vw;
+            display: flex;
+            column-gap: 20px;
+        } */
+        #r2{
+            transform: translateX(30px);
+        }
+        #right h2{
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        #r2 h1{
+            margin-left: 10%;
+            margin-top: 2%;
+            font-size: 130px;
+            line-height:90%;
+            font-weight: bolder;
+        }
+        #r2 p{
+            margin: 0%;
+            margin-left: 10%;
+            font-size: 20px;
+        }
+        #r3{
+            margin-top: 10%;
+            height: 200px;
+            width: 250px;
+            background-color: blue;
+            border-radius: 3px;
+            transform: rotateX('10');
+        }
+        #r4{
+            margin-top: 10%;
+            height: 200px;
+            width: 250px;
+            background-color: blue;
+            border-radius: 3px;
+            transform: rotateX('10');
+        }
+        #rightbelow{
+            background-color: yellow;
+            height: 20vh;
+            width: 75%;
+            margin-left: 380px;
+        }
+        #left p{
+            /* margin-top:20%; */
+            margin-left: 10%;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #b1{
+            margin-left: 10%;
+            background-color: greenyellow;
+            padding: 9px 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+        #b1:hover{
+            background-color: black;
+            color: white;
+            transition-delay: 0.3s;
+        }
+        #left img{
+            height: 80px;
+            width: 100px;
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+        .home{
+            height: 30vh;
+            background-color: yellow;
+        }
+        #last3{
+            background-color: yellow;
+            height: 30vh;
+            width: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+            <div id="left">
+                <img src="Screenshot 2025-08-01 095951.png" alt="image">
+                <P>ABOUT</P>
+                <P>EVENTS</P>
+                <P>TESTIMONIALS</P>
+                <p>CONTACT</p>
+                <button id="b1">JOIN NEXT MEETUP</button>
+            </div>
+        <div id="right">
+            <div id="r1">
+                <div id="r2">
+                    <h2 id="h2">WELCOME TO NEXTCONF</h2>
+                    <h1 id="h1">Unlock Possibility with No Code</h1>
+                    <p>a local hub for creators, entrepreneurs, and curious minds to explore, build, and grow without writing a single line of code.</p>
+                </div>
+                <div id="r3">
+
+                </div>
+                <div id="r4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
